@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace LibraryCheckout
 {
-    public partial class Form1 : Form
+    public partial class LibraryCheckout : Form
     {
-        public Form1()
+        public LibraryCheckout()
         {
             InitializeComponent();
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddUser newAddUser = new AddUser();
+            newAddUser.MdiParent = this;
+            newAddUser.Show();
         }
     }
 }
